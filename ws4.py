@@ -6,10 +6,10 @@ img = cv.imread("omr.png")
 image = cv.resize(img,(500,500),interpolation=cv.INTER_AREA)
 cv.imshow("image",image)
 
-white = cv.cvtColor(image,cv.COLOR_BGR2GRAY)
-cv.imshow("gray",white)
+gray = cv.cvtColor(image,cv.COLOR_BGR2GRAY)
+cv.imshow("gray",gray)
 
-thres,white_mask = cv.threshold(white,240,255,cv.THRESH_BINARY)
+thres,white_mask = cv.threshold(gray,240,255,cv.THRESH_BINARY)
 
 mask = cv.cvtColor(white_mask,cv.COLOR_GRAY2BGR)
 
